@@ -16,7 +16,7 @@ function fetchCoins(){
     })
 }
 
-function displayCoins(){
+function displayCoins(){ 
     let btn = document.getElementById('view-tokens')
     btn.addEventListener("click", (e) => {
         console.log(e.target)
@@ -27,9 +27,7 @@ function displayCoins(){
             const a = document.createElement('a')
             li.appendChild(a)
             li.innerHTML += 
-                `<li><h5 class = "center-align">${coin.name}</h5></li>`
-
+                `<li><h5 class = "center-align"><a href = "#" data-id="${coin.rank}">${coin.name}</a></h5></li>`
         })
     })
-    
 }
