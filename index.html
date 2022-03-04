@@ -1,29 +1,34 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Intro to AJAX Practice Tasks</title>
-    <script src="src/index.js" charset="utf-8"></script>
-  </head>
-  <body>
-    <h1>Dog CEO</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div id="dog-image-container">
-      <!-- images here -->
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            
+    <title>Token Tracker</title>
+</head>
+<body>
+    <div class ="center-align " >
+        <h1>Crypto Token Tracker</h1>
+    <button id ="view-tokens" class="waves-effect waves-light btn-large light-green lighten-3">View Tokens</button>
     </div>
-
+    <br>
     <hr>
-    <label for="select-breed">Filter Breeds That Start with:</label>
-    <select id="breed-dropdown" name="select-breed">
-      <option value="a">a</option>
-      <option value="b">b</option>
-      <option value="c">c</option>
-      <option value="d">d</option>
-    </select>
+    <br>
+    <div id = "main">
+        <ul id="token-list">
+        
 
-    <ul id="dog-breeds">
-
-    </ul>
-
-  </body>
+        </ul>
+        <div id = "price-info"></div>
+    </div>
+    <script src = "javascripts/index.js"></script>
+</body>
 </html>
