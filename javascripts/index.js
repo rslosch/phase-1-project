@@ -37,22 +37,21 @@ const addEventsToList = () => {
 }
 
 const displayIndividualCoin = (e) => {
-    const info = document.getElementById("price-info")
+    const info = document.getElementById("coin-info")
     const ul = document.getElementById('token-list')
     ul.innerHTML = ""
     // fetch(`https://api.coincap.io/v2/assets/${e.target.dataset.id}`)
     // .then(res => res.json())
     // .then(data => {
-        debugger
     const coin = coins.find(c => c.id === e.target.dataset.id)
     // const {name, symbol, rank, marketCapUsd, priceUsd, changePercent24Hr} = data.data
     console.log(coin)
     info.innerHTML = `
-        <h1>${coin.name}</h1>
-        <h1>${coin.symbol}</h1>
-        <h2>${coin.rank}</h2>
-        <h2>${coin.marketCapUsd}</h2>
-        <h3>${coin.priceUsd}</h3>
-        <h3>${coin.changePercent24Hr}</h3>
+        <h1>Coin: ${coin.name}</h1>
+        <h1>Ticker: ${coin.symbol}</h1>
+        <h2>Rank: ${coin.rank}</h2>
+        <h2>Market Cap: $${coin.marketCapUsd.split(".")[0]}</h2>
+        <h3>Current Price: $${coin.priceUsd.split(".")[0]}</h3>
+        <h3>24hr Price Change: ${coin.changePercent24Hr.slice(0,4)}%</h3>
     `
 }
